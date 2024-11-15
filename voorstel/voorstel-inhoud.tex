@@ -15,37 +15,44 @@
 \section{Inleiding}%
 \label{sec:inleiding}
 
-Waarover zal je bachelorproef gaan? Introduceer het thema en zorg dat volgende zaken zeker duidelijk aanwezig zijn:
+De bachelorproef richt zich op het gebruik van Large Language Models (LLM's) om mensen met alexithymie te ondersteunen bij het identificeren en verwoorden van hun emoties. Alexithymie is een aandoening waarbij individuen moeite hebben met het herkennen en beschrijven van hun eigen emoties, wat kan leiden tot problemen in persoonlijke relaties en therapieën. Het doel van dit onderzoek is om te onderzoeken hoe LLM's, zoals GPT-4, kunnen worden ingezet om deze doelgroep te helpen door middel van gepersonaliseerde vragenlijsten en oefeningen die zijn gebaseerd op bestaande therapeutische methoden zoals cognitieve gedragstherapie (CBT).
 
-\begin{itemize}
-  \item kaderen thema
-  \item de doelgroep
-  \item de probleemstelling en (centrale) onderzoeksvraag
-  \item de onderzoeksdoelstelling
-\end{itemize}
-
-Denk er aan: een typische bachelorproef is \textit{toegepast onderzoek}, wat betekent dat je start vanuit een concrete probleemsituatie in bedrijfscontext, een \textbf{casus}. Het is belangrijk om je onderwerp goed af te bakenen: je gaat voor die \textit{ene specifieke probleemsituatie} op zoek naar een goede oplossing, op basis van de huidige kennis in het vakgebied.
-
-De doelgroep moet ook concreet en duidelijk zijn, dus geen algemene of vaag gedefinieerde groepen zoals \emph{bedrijven}, \emph{developers}, \emph{Vlamingen}, enz. Je richt je in elk geval op it-professionals, een bachelorproef is geen populariserende tekst. Eén specifiek bedrijf (die te maken hebben met een concrete probleemsituatie) is dus beter dan \emph{bedrijven} in het algemeen.
-
-Formuleer duidelijk de onderzoeksvraag! De begeleiders lezen nog steeds te veel voorstellen waarin we geen onderzoeksvraag terugvinden.
-
-Schrijf ook iets over de doelstelling. Wat zie je als het concrete eindresultaat van je onderzoek, naast de uitgeschreven scriptie? Is het een proof-of-concept, een rapport met aanbevelingen, \ldots Met welk eindresultaat kan je je bachelorproef als een succes beschouwen?
+De centrale probleemstelling van dit onderzoek is: *Hoe kunnen Large Language Models worden gebruikt om mensen met alexithymie te ondersteunen bij het identificeren en verwoorden van hun emoties?* De onderzoeksdoelstelling is om een platform te ontwikkelen dat gebruik maakt van een LLM om mensen met alexithymie te begeleiden in het herkennen van hun emoties, met als eindresultaat een proof-of-concept dat de effectiviteit van deze aanpak aantoont. Dit platform zal worden getest bij een groep deelnemers die positief scoren op de Toronto Alexithymia Scale (TAS-20), waarbij we zowel objectieve verbeteringen in emotieherkenning als subjectieve gebruikerservaringen zullen evalueren.
 
 %---------- Stand van zaken ---------------------------------------------------
 
 \section{Literatuurstudie}%
 \label{sec:literatuurstudie}
 
-Hier beschrijf je de \emph{state-of-the-art} rondom je gekozen onderzoeksdomein, d.w.z.\ een inleidende, doorlopende tekst over het onderzoeksdomein van je bachelorproef. Je steunt daarbij heel sterk op de professionele \emph{vakliteratuur}, en niet zozeer op populariserende teksten voor een breed publiek. Wat is de huidige stand van zaken in dit domein, en wat zijn nog eventuele open vragen (die misschien de aanleiding waren tot je onderzoeksvraag!)?
+\subsection{Mapping van Emoties op het lichaam}
+\label{subsec:mapping-van-emoties-op-het-lichaam}%
 
-Je mag de titel van deze sectie ook aanpassen (literatuurstudie, stand van zaken, enz.). Zijn er al gelijkaardige onderzoeken gevoerd? Wat concluderen ze? Wat is het verschil met jouw onderzoek?
+Onderzoek toont aan dat emoties onder andere worden ervaren als lichamelijke sensaties in specifieke delen van het lichaam. \textcite{Nummenmaa2013} hebben met behulp van topografische zelfrapportage methoden aangetoond dat verschillende emoties consistent geassocieerd zijn met unieke sensaties in het lichaam. Zo wordt woede bijvoorbeeld vaak gevoeld in het bovenlijf, terwijl verdriet gepaard gaat met verminderde activiteit over heel het lichaam. Deze bevindingen suggereren dat emoties niet alleen mentale toestanden zijn, maar ook lichamelijke ervaringen die op het lichaam kunnen worden gemapt.
 
-Verwijs bij elke introductie van een term of bewering over het domein naar de vakliteratuur, bijvoorbeeld~\autocite{Hykes2013}! Denk zeker goed na welke werken je refereert en waarom.
+Deze inzichten kunnen nuttig zijn voor Large Language Models (LLM's) om mensen met alexithymie te ondersteunen bij het identificeren van hun emoties. Door de mapping van emoties op het lichaam, zoals die door \textcite{Nummenmaa2013} zijn vastgesteld, te converteren naar een formaat dat begrijpelijk is voor een LLM, kan het model vragen stellen over waar de gebruiker sensaties ervaart in het lichaam en op basis van deze informatie kan de LLM vervolgens suggesties doen over welke emoties mogelijk worden ervaren, hierdoor kunnen gebruikers geholpen worden bij het herkennen en verwoorden van hun gevoelens, ondanks hun moeilijkheid om deze zelf te identificeren \autocite{Nummenmaa2013}.
 
-Draag zorg voor correcte literatuurverwijzingen! Een bronvermelding hoort thuis \emph{binnen} de zin waar je je op die bron baseert, dus niet er buiten! Maak meteen een verwijzing als je gebruik maakt van een bron. Doe dit dus \emph{niet} aan het einde van een lange paragraaf. Baseer nooit teveel aansluitende tekst op eenzelfde bron.
+\subsection{Verhalen en afbeeldingen voor het trainen van Emotieherkenning}
+\label{subsec:verhalen-en-afbeeldingen-voor-het-trainen-van-emotieherkenning}%
 
-Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle nodige info aanwezig is om de bron terug te vinden (zoals uitvoerig besproken in de lessen Research Methods).
+In de studie van \textcite{Lukas2019} werd een smartphone-gebaseerde interventie ontwikkeld om emotieherkenningsvaardigheden te trainen bij mensen met alexithymie. De interventie combineerde psycho-educatie met een 14-daagse training via de app MT-ALEX, waarbij gebruikers verhalen lazen en deze koppelden aan tekstuele beschrijvingen en afbeeldingen om emoties te herkennen. De resultaten toonden aan dat deze aanpak leidde tot een significante verbetering in emotieherkenning \autocite{Lukas2019}.
+
+Het gebruik van verhalen en afbeeldingen kan dus nuttig zijn om mensen met alexithymie te helpen bij het herkennen van emoties. Large Language Models (LLM's) kunnen op een vergelijkbare manier worden ingezet, door zowel AI-gegenereerde verhalen als persoonlijke ervaringen van de gebruiker te gebruiken. Bovendien kunnen LLM's worden gekoppeld aan technologieën die afbeeldingen genereren of ophalen, wat een geïntegreerde aanpak mogelijk maakt om emotieherkenning te bevorderen \autocite{Lukas2019}.
+
+\subsection{Gedragstherapie voor alexithymie}
+\label{subsec:gedragstherapie-voor-alexithymie}%
+
+In de studie van \textcite{Cameron2014} wordt besproken hoe verschillende psychologische interventies, zoals cognitieve gedragstherapie (CBT) en psychodynamische therapie, effectief kunnen zijn in het verminderen van alexithymie. Deze therapieën richten zich vaak op het verbeteren van emotionele herkenning en expressie, wat cruciaal is voor mensen met alexithymie. De studie concludeert dat alexithymie gedeeltelijk kan worden verminderd door therapeutische interventies, vooral wanneer deze interventies specifiek gericht zijn op de symptomen van alexithymie \autocite{Cameron2014}.
+
+Op basis van bestaande therapiekaders zoals CBT kunnen Large Language Models (LLM's) worden ingezet om gepersonaliseerde vragenlijsten en oefeningen te ontwikkelen die gebruikers helpen hun emoties beter te identificeren en te verwoorden. Door deze therapieën te vertalen naar een digitaal format, kan een LLM niet alleen vragen stellen, maar ook feedback geven op de antwoorden van de gebruiker, wat een waardevolle aanvulling kan zijn op traditionele therapieën \autocite{Cameron2014}.
+
+\subsection{Emotieherkenning door Large Language Models}
+\label{subsec:emotieherkenning-door-large-language-models}%
+
+In een recente studie over emotieherkenning door Large Language Models (LLM's) werd onderzocht hoe goed deze modellen emoties kunnen identificeren en beschrijven. De studie vergeleek de prestaties van verschillende modellen, waaronder GPT-3.5, GPT-4 en Bard, op basis van de Toronto Alexithymia Scale (TAS-20) en de Empathy Quotient (EQ-60). Uit de resultaten bleek dat GPT-4 het dichtst bij het menselijke niveau van emotieherkenning kwam, terwijl andere modellen zoals GPT-3.5 en Bard slechter presteerden, met name op het gebied van alexithymie \autocite{Patel2023}.
+
+Deze bevindingen hebben ons doen besluiten om GPT-4 te gebruiken in onze studie, gezien zijn superieure vermogen om emoties te herkennen binnen geschreven taal. Dit model biedt echter uitdagingen op het gebied van reproduceerbaarheid en privacy. Aangezien GPT-4 een commercieel model is dat niet publiekelijk beschikbaar is, kan dit problemen opleveren voor wetenschappelijke herhaalbaarheid. Daarnaast is er een privacyrisico, omdat OpenAI toegang heeft tot de gesprekken die via hun model worden gevoerd. Gebruikers moeten daarom expliciet geïnformeerd worden over deze risico's \autocite{Patel2023}.
+
+
 
 % Voor literatuurverwijzingen zijn er twee belangrijke commando's:
 % \autocite{KEY} => (Auteur, jaartal) Gebruik dit als de naam van de auteur
@@ -54,31 +61,40 @@ Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle no
 %   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
 %   ...'')
 
-Je mag deze sectie nog verder onderverdelen in subsecties als dit de structuur van de tekst kan verduidelijken.
-
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}%
 \label{sec:methodologie}
 
-Hier beschrijf je hoe je van plan bent het onderzoek te voeren. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor literatuurstudie, interviews met belanghebbenden (bv.~voor requirements-analyse), experimenten, simulaties, vergelijkende studie, risico-analyse, PoC, \ldots?
+\subsection{1. Voorbereiding}
+Alle relevante informatie uit de literatuur wordt verzameld en omgezet naar functionele vereisten voor het systeem. Dit omvat de capaciteiten die het Large Language Model (LLM) moet hebben om mensen met alexithymie te ondersteunen bij het identificeren en verwoorden van emoties.
 
-Valt je onderwerp onder één van de typische soorten bachelorproeven die besproken zijn in de lessen Research Methods (bv.\ vergelijkende studie of risico-analyse)? Zorg er dan ook voor dat we duidelijk de verschillende stappen terug vinden die we verwachten in dit soort onderzoek!
+\subsection{2. Dataverzameling en verwerking}
+Er wordt specifieke data verzameld over:
+\begin{itemize}
+  \item Mapping van emoties op het lichaam.
+  \item Definities en beschrijvingen van emoties.
+  \item Informatie en testen gerelateerd aan therapeutische methoden zoals cognitieve gedragstherapie (CBT) en psychodynamische therapie.
+\end{itemize}
+Deze data wordt omgezet naar een formaat dat door het LLM kan worden verwerkt. Prompts worden ontwikkeld en getest voor gebruik binnen het platform.
 
-Vermijd onderzoekstechnieken die geen objectieve, meetbare resultaten kunnen opleveren. Enquêtes, bijvoorbeeld, zijn voor een bachelorproef informatica meestal \textbf{niet geschikt}. De antwoorden zijn eerder meningen dan feiten en in de praktijk blijkt het ook bijzonder moeilijk om voldoende respondenten te vinden. Studenten die een enquête willen voeren, hebben meestal ook geen goede definitie van de populatie, waardoor ook niet kan aangetoond worden dat eventuele resultaten representatief zijn.
+\subsection{3. Platform bouwen}
+Het platform wordt gebouwd met behulp van de OpenAI API, waarbij een back-end in Python wordt geschreven. Python is gekozen vanwege zijn toegankelijkheid en brede gebruik in toepassingen met LLM's. Het platform zal dienen als een interface voor gebruikers.
 
-Uit dit onderdeel moet duidelijk naar voor komen dat je bachelorproef ook technisch voldoen\-de diepgang zal bevatten. Het zou niet kloppen als een bachelorproef informatica ook door bv.\ een student marketing zou kunnen uitgevoerd worden.
+\subsection{4. Deelnemers werven}
+Deelnemers worden gerekruteerd en leggen de Toronto Alexithymia Scale (TAS-20) af, een standaardtest voor alexithymie. Deelnemers die boven een bepaalde drempel scoren, worden geselecteerd voor deelname aan het experiment.
 
-Je beschrijft ook al welke tools (hardware, software, diensten, \ldots) je denkt hiervoor te gebruiken of te ontwikkelen.
+\subsection{5. Experiment uitvoeren}
+Gedurende 14 dagen spenderen deelnemers dagelijks minstens 15 minuten op het platform. Geanonimiseerde data over hun interacties wordt verzameld, en na afloop leggen ze opnieuw de TAS-20 test af om verbeteringen te meten. Daarnaast worden hun subjectieve ervaringen geëvalueerd.
 
-Probeer ook een tijdschatting te maken. Hoe lang zal je met elke fase van je onderzoek bezig zijn en wat zijn de concrete \emph{deliverables} in elke fase?
+\subsection{6. Data-analyse}
+De verzamelde data wordt geanalyseerd om te bepalen of het gebruik van het platform heeft geleid tot verbeteringen in emotieherkenning bij gebruikers met alexithymie. Objectieve resultaten worden vergeleken met hun subjectieve ervaringen om correlaties te identificeren.
+
+\subsection{7. Rapportage}
+De bevindingen van dit onderzoek worden gerapporteerd om te evalueren of het platform effectief is geweest in het ondersteunen van gebruikers bij het identificeren en verwoorden van hun emoties.
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}%
 \label{sec:verwachte_resultaten}
 
-Hier beschrijf je welke resultaten je verwacht. Als je metingen en simulaties uitvoert, kan je hier al mock-ups maken van de grafieken samen met de verwachte conclusies. Benoem zeker al je assen en de onderdelen van de grafiek die je gaat gebruiken. Dit zorgt ervoor dat je concreet weet welk soort data je moet verzamelen en hoe je die moet meten.
-
-Wat heeft de doelgroep van je onderzoek aan het resultaat? Op welke manier zorgt jouw bachelorproef voor een meerwaarde?
-
-Hier beschrijf je wat je verwacht uit je onderzoek, met de motivatie waarom. Het is \textbf{niet} erg indien uit je onderzoek andere resultaten en conclusies vloeien dan dat je hier beschrijft: het is dan juist interessant om te onderzoeken waarom jouw hypothesen niet overeenkomen met de resultaten.
+We verwachten dat het platform een significante verbetering zal laten zien in het vermogen van deelnemers met alexithymie om emoties te herkennen en te verwoorden. Deelnemers die het platform gebruiken, zullen naar verwachting lagere scores behalen op de Toronto Alexithymia Scale (TAS-20) na de interventie, wat wijst op een vermindering van alexithymische kenmerken. Daarnaast verwachten we dat gebruikers positieve feedback zullen geven over de bruikbaarheid van het platform en hoe het hen heeft geholpen bij het begrijpen van hun emoties.
 
